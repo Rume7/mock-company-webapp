@@ -8,12 +8,11 @@ pipeline {
    stages {
         stage('Build') {
             steps {
-                ./gradlew assemble
+                ./gradlew build
             }
         }
         stage('Test') {
             steps {
-                echo 'Running the tests'
                 ./gradlew test
             }
         }
